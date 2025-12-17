@@ -1,0 +1,46 @@
+{
+  "name": "vite-plugin-allowlist",
+  "version": "0.1.0",
+  "description": "A Vite plugin to restrict incoming requests by IP allowlist (supports env-based config).",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "keywords": [
+    "vite",
+    "plugin",
+    "allowlist",
+    "ip",
+    "whitelist"
+  ],
+  "author": "Wang Guolong",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "import": "./dist/index.js",
+    "default": "./dist/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "vite": "*"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6",
+    "tsup": "^6.6.0",
+    "@types/node": "^20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangguolong0/vite-plugin-allowlist.git"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --out-dir dist --clean",
+    "prepare": "npm run build"
+  }
+}
